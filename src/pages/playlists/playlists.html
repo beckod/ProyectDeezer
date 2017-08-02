@@ -1,0 +1,57 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Lista de playlists de usuario {{ userID }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="user">
+    <img src="/assets/images/deezer-playlist.jpg" alt="">
+    <h1>Nombre de usuario {{ userID }}</h1>
+  </div>
+
+  <ion-list>
+    <ion-item (click)="goToCanciones(1)">
+      <ion-thumbnail item-left>
+        <img src="/assets/images/deezer-playlist.jpg" alt="">
+      </ion-thumbnail>
+      <h2>Titulo de Playlist 1</h2>
+      <p>#Canciones</p>
+    </ion-item>
+    <ion-item (click)="goToCanciones(2)">
+      <ion-thumbnail item-left>
+        <img src="/assets/images/deezer-playlist.jpg" alt="">
+      </ion-thumbnail>
+      <h2>Titulo de Playlist 2</h2>
+      <p>#Canciones</p>
+    </ion-item>
+    <ion-item (click)="goToCanciones(3)">
+      <ion-thumbnail item-left>
+        <img src="/assets/images/deezer-playlist.jpg" alt="">
+      </ion-thumbnail>
+      <h2>Titulo de Playlist 3</h2>
+      <p>#Canciones</p>
+    </ion-item>
+    <ion-item (click)="goToCanciones(4)">
+      <ion-thumbnail item-left>
+        <img src="/assets/images/deezer-playlist.jpg" alt="">
+      </ion-thumbnail>
+      <h2>Titulo de Playlist 4</h2>
+      <p>#Canciones</p>
+    </ion-item>
+    <ion-item (click)="goToCanciones(5)">
+      <ion-thumbnail item-left>
+        <img src="/assets/images/deezer-playlist.jpg" alt="">
+      </ion-thumbnail>
+      <h2>Titulo de Playlist 5</h2>
+      <p>#Canciones</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -3,12 +3,18 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { InicioPage } from '../pages/inicio/inicio';
 import { PerfilesPage } from '../pages/perfiles/perfiles';
 import { ContactoPage } from '../pages/contacto/contacto';
 import { AcercaPage } from '../pages/acerca/acerca';
+import { PlaylistsPage } from '../pages/playlists/playlists';
+import { CancionesPage } from '../pages/canciones/canciones';
+import { DeezerServiceProvider } from '../providers/deezer-service/deezer-service';
+
+
 
 @NgModule({
   declarations: [
@@ -16,10 +22,13 @@ import { AcercaPage } from '../pages/acerca/acerca';
     InicioPage,
     PerfilesPage,
     ContactoPage,
-    AcercaPage
+    AcercaPage,
+    PlaylistsPage,
+    CancionesPage
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -28,12 +37,15 @@ import { AcercaPage } from '../pages/acerca/acerca';
     InicioPage,
     PerfilesPage,
     ContactoPage,
-    AcercaPage
+    AcercaPage,
+    PlaylistsPage,
+    CancionesPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DeezerServiceProvider
   ]
 })
 export class AppModule {}

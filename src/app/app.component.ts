@@ -7,6 +7,10 @@ import { InicioPage } from '../pages/inicio/inicio';
 import { PerfilesPage } from '../pages/perfiles/perfiles';
 import { ContactoPage } from '../pages/contacto/contacto';
 import { AcercaPage } from '../pages/acerca/acerca';
+import { PlaylistsPage } from '../pages/playlists/playlists';
+import { CancionesPage } from '../pages/canciones/canciones';
+
+
 
 
 @Component({
